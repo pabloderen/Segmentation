@@ -67,28 +67,3 @@ debug.write(command)
 debug.close()
 
 subprocess.run(["bash", dir_path + "/debug.sh"])
-
-
-# ext = getattr(pcl.segmentation.EuclideanClusterExtraction, "PointXYZRGB")()
-# ext.setInputCloud(cloud)
-# ext.setClusterTolerance(0.2)
-# ext.setMinClusterSize(1000)
-# ext.setMaxClusterSize(2500000)
-# ext.setSearchMethod(pcl.search.KdTree.PointXYZRGB())
-# vector_indices = pcl.vectors.PointIndices()
-# ext.extract(vector_indices)
-
-# logging.info("end clustering")
-
-# for i, cluster in enumerate(vector_indices):
-#     out = pcl.PointCloud.PointXYZRGB()
-#     out.width = len(cluster.indices)
-#     out.height = 1
-#     rgb = random_color()
-#     for indices in cluster.indices:
-#         p = cloud.points[indices]
-#         p.rgb = rgb
-#         out.points.append(p)
-#     pclpy.write_las(out, "Cluster/{0}_{1}.las".format(i, clusterName))
-#     logging.info("Cluster/{0}_{1}.las".format(i, clusterName))
-

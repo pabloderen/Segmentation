@@ -4,10 +4,10 @@ from pclpy import pcl
 
 def segmentPlane(cloud, path):
 
-    optimize = False
+    optimize = True
     model = pclpy.pcl.sample_consensus.SACMODEL_PERPENDICULAR_PLANE
     method = pcl.sample_consensus.SAC_RANSAC
-    distance = 0.2
+    distance = 0.05
     nr_points = cloud.size()
     count = 0
     # compute mls
